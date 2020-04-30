@@ -1,0 +1,39 @@
+plugins {
+    id 'org.springframework.boot' version '2.2.6.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'java'
+}
+
+group = 'com.ljm'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenLocal()
+    maven { url 'https://maven.aliyun.com/repository/google/'}
+    maven { url 'https://maven.aliyun.com/repository/jcenter/'}
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+    compile group: 'com.alipay.sofa', name: 'tracer-core', version: '3.0.7'
+    compile group: 'com.alipay.sofa', name: 'tracer-extensions', version: '3.0.7'
+    compile group: 'com.alipay.sofa', name: 'sofa-tracer-dubbo-plugin', version: '3.0.7'
+    compile group: 'com.alipay.sofa', name: 'sofa-tracer-springmvc-plugin', version: '3.0.7'
+    compile group: 'com.alipay.sofa', name: 'tracer-sofa-boot-starter', version: '3.0.7'
+    compile group: 'com.alipay.sofa', name: 'tracer-all', version: '3.0.7'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-logging', version: '2.2.6.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.2.6.RELEASE'
+    compile group: 'com.alipay.sofa', name: 'sofa-tracer-flexible-plugin', version: '3.0.7'
+    compile group: 'com.alipay.sofa', name: 'sofa-tracer-zipkin-plugin', version: '3.0.7'
+
+
+}
+
+test {
+    useJUnitPlatform()
+}

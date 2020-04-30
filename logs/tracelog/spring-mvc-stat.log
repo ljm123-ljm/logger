@@ -1,0 +1,1 @@
+{"time":"2020-04-30 17:18:02.040","stat.key":{"method":"GET","local.app":"test","request.url":"http://localhost:8080/findByUsername/%E4%B9%90%E5%98%89%E6%98%8E"},"count":1,"total.cost.milliseconds":139,"success":"Y","load.test":"F"}
